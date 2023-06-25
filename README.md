@@ -1,41 +1,12 @@
-# Mangane
+#### Forked from [BDX-town/Mangane](https://github.com/BDX-town/Mangane)
 
-Mangane is an alternative frontend for Pleroma, Akkoma and Mastodon with a focus on ease of use, readability and custom branding.
+# NexUI
 
-This project is developped for [BDX-town](http://bdx.town/) Akkoma instance. Akkoma is a fork of Pleroma who mostly adds features, exposing them through new API endpoints. As of today, Akkoma and Pleroma API are compatible.
-
-Mangane inherit from Pleroma the native large compatibility with Mastodon API.
-
-Moreover, Mangane already has a feature detection system allowing us to adapt the experience following what platform is used as a backend.
-
-We are speaking about Akkoma here since we are planning to add Akkoma specific features to the project without breaking any existing compatibility.
-
-## Manifesto
-
-Mangane is a fork of an existing project driven by a fundamental disagreement regarding the opinions and actions of its maintainer. This manifesto serves as a declaration of our motivations and the principles that guide the development of Mangane.
-
-### Our Vision
-Mangane aims to provide a more accessible interface compared to the majority of existing software interfaces. We recognize that many platforms overlook the importance of user-friendliness and fail to incorporate familiar design patterns that users are accustomed to. By leveraging well-established user interface conventions, we strive to create an inclusive environment that welcomes users from diverse backgrounds and skill levels.
-
-### Supporting Akkoma and Promoting Sustainability
-One of the primary reasons Mangane embraces Akkoma is because of its alignment with our software's objectives. Akkoma has been chosen not only for its capabilities but also because it can operate efficiently on modest hardware configurations. This choice reflects our commitment to energy efficiency and sustainability, allowing users to engage with technology while minimizing their environmental impact.
-
-### Transparency and Accountability
-We understand the importance of demonstrating our good intentions and the integrity of our project. To that end, we invite interested parties to explore the following resources as evidence of our commitment to ethical practices:
-
-* [Manifesto of bdx.town (available in French)](https://bdx.town/about)
-* [Rules of bdx.town (available in French)](https://bdx.town/about/rules)
-* [Publicly accessible blocklist of bdx.town](https://bdx.town/api/v1/instance) (pleroma -> metadata -> federation -> mrf_simple -> reject)
-
-These resources provide insight into the principles upheld by the individuals involved in Mangane and showcase our dedication to creating a safe and respectful digital environment.
-
-![UI Mixed](./docs/ui-mixed.png)
-![UI Dark](./docs/ui-dark.png)
-![UI Light](./docs/ui-light.png)
+NexUI is the frontend used for the [official Nexify site](https://nexifyhub.com).
 
 ## How does it work?
 
-Mangane is a [single-page application (SPA)](https://en.wikipedia.org/wiki/Single-page_application) that runs entirely in the browser with JavaScript.
+NexUI is a [single-page application (SPA)](https://en.wikipedia.org/wiki/Single-page_application) that runs entirely in the browser with JavaScript.
 
 It has a single HTML file, `index.html`, responsible only for loading the required JavaScript and CSS.
 It interacts with the backend through [XMLHttpRequest (XHR)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest).
@@ -53,36 +24,36 @@ location / {
 }
 ```
 
-(See [`mastodon.conf`](https://github.com/BDX-town/Mangane/blob/master/installation/mastodon.conf) file for a full example.)
+(See [`mastodon.conf`](https://github.com/NexifyHub/NexUI/blob/master/installation/mastodon.conf) file for a full example.)
 
-Mangane incorporates much of the [Mastodon API](https://docs.joinmastodon.org/methods/), [Pleroma API](https://api.pleroma.social/), and more.
+NexUI incorporates much of the [Mastodon API](https://docs.joinmastodon.org/methods/), [Pleroma API](https://api.pleroma.social/), and more.
 It detects features supported by the backend to provide the right experience for the backend.
 
 # :rocket: Deploy on Pleroma/Akkoma
 
-Installing Mangane on an existing Pleroma or Akkoma instance is easy.
+Installing NexUI on an existing Pleroma or Akkoma instance is easy.
 Log in with SSH your server and follow those instructions depending on your configuration.
 
 ## Download
 
-First you need to download Mangane on your server.
+First you need to download NexUI on your server.
 
 #### For OTP install
 
 ```sh
-/opt/pleroma/bin/pleroma_ctl frontend install mangane --ref dist --build-url https://github.com/BDX-town/Mangane/releases/latest/download/static.zip
+/opt/pleroma/bin/pleroma_ctl frontend install nexui --ref dist --build-url https://github.com/NexifyHub/NexUI/releases/latest/download/static.zip
 ```
 *Note: The pleroma_ctl path may vary on your system, if you are using Akkoma it's probably in /opt/akkoma/bin/*
 
 #### For Mix/Source install
 
 ```sh
-mix pleroma.frontend install mangane --ref dist --build-url https://github.com/BDX-town/Mangane/releases/latest/download/static.zip
+mix pleroma.frontend install nexui --ref dist --build-url https://github.com/NexifyHub/NexUI/releases/latest/download/static.zip
 ```
 
 #### With Admin FE 
 
-If database configuration is enabled, you can also install Mangane from the Admin interface of Pleroma/Akkoma. 
+If database configuration is enabled, you can also install NexUI from the Admin interface of Pleroma/Akkoma. 
 Just fill the form at Frontend/Available like this.
 
 ![admin-fe](./docs/admin-ui-1.png)
@@ -98,7 +69,7 @@ Edit your configuration files to add/edit the `config :pleroma, :frontends` sect
 ```
 config :pleroma, :frontends,
   primary: %{
-    "name" => "mangane",
+    "name" => "nexui",
     "ref" => "dist"
   }
 ```
@@ -112,8 +83,8 @@ Just fill the form at Frontend/frontends/Primary like this.
 
 **That's it!** :tada:
 
-Mangane is now installed.
-The change will take effect immediately, just refresh your browser tab, and Mangane will replace the default Pleroma FE or Akkoma FE interface. 
+NexUI is now installed.
+The change will take effect immediately, just refresh your browser tab, and NexUI will replace the default Pleroma FE or Akkoma FE interface. 
 You may need to restart Pleroma/Akkoma for the change to take effect.
 
 If you notice some issue with UI colors, please take a look at the Troubleshooting section.
@@ -122,18 +93,18 @@ If you notice some issue with UI colors, please take a look at the Troubleshooti
 
 #### Yunohost server
 
-If you use Akkoma or Pleroma packaged application for [Yunohost](https://yunohost.org), a Debian system dedicated to self hosting, you can install Mangane from the command line `pleroma_ctl`) or with Pleroma’s admin interface (Admin FE). More instructionh can be found in [Installing on Yunohost](./docs/administration/yunohost.md) documentation page.
+If you use Akkoma or Pleroma packaged application for [Yunohost](https://yunohost.org), a Debian system dedicated to self hosting, you can install NexUI from the command line `pleroma_ctl`) or with Pleroma’s admin interface (Admin FE). More instructionh can be found in [Installing on Yunohost](./docs/administration/yunohost.md) documentation page.
 
 #### Deploy on Mastodon
 
-Mangane is developed and tested only for Pleroma and Akkoma, this mean that there is _no_ explicit support to be installed as a frontend for a Mastodon instance.  If you want to try anyway, procede with caution. See the Soapbox (version 2) outdated documentation on [installing over Mastodon](./docs/administration/mastodon.md).
+NexUI is developed and tested only for Pleroma and Akkoma, this mean that there is _no_ explicit support to be installed as a frontend for a Mastodon instance.  If you want to try anyway, procede with caution. See the Soapbox (version 2) outdated documentation on [installing over Mastodon](./docs/administration/mastodon.md).
 
 # Upgrade
 
-To upgrade Mangane, run the install commands again, on top of actual version.
+To upgrade NexUI, run the install commands again, on top of actual version.
 
 ```
-/opt/pleroma/bin/pleroma_ctl frontend install mangane --ref dist --build-url https://github.com/BDX-town/Mangane/releases/latest/download/static.zip
+/opt/pleroma/bin/pleroma_ctl frontend install nexui --ref dist --build-url https://github.com/NexifyHub/NexUI/releases/latest/download/static.zip
 ```
 
 If you want, you can also upgrade from the admin interface (Admin FE), doing a _new_ installation.
@@ -143,8 +114,8 @@ If you want, you can also upgrade from the admin interface (Admin FE), doing a _
 To get it running, just clone the repo:
 
 ```sh
-git clone https://github.com/BDX-town/Mangane.git
-cd Mangane
+git clone https://github.com/NexifyHub/NexUI.git
+cd NexUI
 ```
 
 Ensure that Node.js and Yarn are installed, then install dependencies:
@@ -180,7 +151,7 @@ Try again.
 
 ## Developing against a live backend
 
-You can also run Mangane FE locally with a live production server as the backend.
+You can also run NexUI FE locally with a live production server as the backend.
 
 > **Note:** Whether or not this works depends on your production server. It does not seem to work with Cloudflare or VanwaNet.
 
@@ -196,9 +167,9 @@ All configuration is optional, except `NODE_ENV`.
 #### `NODE_ENV`
 
 The Node environment.
-Mangane checks for the following options:
+NexUI checks for the following options:
 
-- `development` - What you should use while developing Mangane FE.
+- `development` - What you should use while developing NexUI FE.
 - `production` - Use when compiling to deploy to a live server.
 - `test` - Use when running automated tests.
 
@@ -254,17 +225,17 @@ NODE_ENV=development
 We welcome contributions to this project. To contribute, first review the [Contributing doc](docs/contributing.md)
 
 Additional supporting documents include:
-* [Mangane History](docs/history.md)
+* [NexUI History](docs/history.md)
 * Redux Store Map
 
 # Customization
 
-Mangane supports customization of the user interface, to allow per instance branding and other features. Current customization features include:
+NexUI supports customization of the user interface, to allow per instance branding and other features. Current customization features include:
 
 * Instance name, site logo and favicon.
 * Custom pages: e.g About, Terms of Service page, Privacy Policy page, Copyright Policy (DMCA).
 * Promo panel custom links (e.g. link to blog or documentation external site).
-* Mangane extensions.
+* NexUI extensions.
 * Default instance settings (e.g. default theme).
 
 Customization details can be found in the [Customization documentation](docs/customization.md)
@@ -283,7 +254,7 @@ If you notice any issue with your UI style configuration, please update your HTT
 
 Here is a example configuration for nginx:
 ```
-# add style-src for mangane
+# add style-src for nexui
 proxy_hide_header Content-Security-Policy:
 add_header Content-Security-Policy "upgrade-insecure-requests;script-src 'self';connect-src 'self' blob: https://example.com wss://example.com;media-src 'self' https:;img-src 'self' data: blob: https:;default-src 'none';base-uri 'self';frame-ancestors 'none';style-src 'self' 'unsafe-inline';font-src 'self';manifest-src 'self';" always;
 ```
@@ -291,22 +262,22 @@ add_header Content-Security-Policy "upgrade-insecure-requests;script-src 'self';
 
 # License & Credits
 
-Mangane is free software: you can redistribute it and/or modify
+NexUI is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-Mangane is distributed in the hope that it will be useful,
+NexUI is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU Affero General Public License for more details.
 
 You should have received a copy of the GNU Affero General Public License
-along with Mangane.  If not, see <https://www.gnu.org/licenses/>.
+along with NexUI.  If not, see <https://www.gnu.org/licenses/>.
 
-Mangane make use of code from other opensource and free software under various licenses:
+NexUI make use of code from other opensource and free software under various licenses:
 
-- Mangane is a fork of [Soapbox](https://soapbox.pub) a frontend for Rebased, Pleroma and Mastodon, licensed under AGPL v3 or later.
+- NexUI is a fork of [Mangane](https://github.com/BDX-town/Mangane) a frontend for Rebased, Pleroma and Mastodon, licensed under the same license.
 
 - `static/sounds/chat.mp3` and `static/sounds/chat.oga` are from [notificationsounds.com](https://notificationsounds.com/notification-sounds/intuition-561) licensed under CC BY 4.0.
 
