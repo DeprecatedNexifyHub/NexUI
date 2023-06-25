@@ -27,7 +27,7 @@ const DevelopersChallenge = () => {
   };
 
   const handleSubmit = () => {
-    if (answer === 'boxsoap') {
+    if (answer === 'hubnexify') {
       dispatch(changeSettingImmediate(['isDeveloper'], true));
       dispatch(snackbar.success(intl.formatMessage(messages.success)));
     } else {
@@ -35,8 +35,8 @@ const DevelopersChallenge = () => {
     }
   };
 
-  const challenge = `function soapbox() {
-  return 'soap|box'.split('|').reverse().join('');
+  const challenge = `function nexifyhub() {
+  return 'nexify|hub'.split('|').reverse().join('');
 }`;
 
   return (
@@ -46,7 +46,7 @@ const DevelopersChallenge = () => {
           <FormattedMessage
             id='developers.challenge.message'
             defaultMessage='What is the result of calling {function}?'
-            values={{ function: <span className='font-mono'>soapbox()</span> }}
+            values={{ function: <span className='font-mono'>nexifyhub()</span> }}
           />
         </Text>
         <Text tag='pre' family='mono'>

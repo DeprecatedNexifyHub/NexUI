@@ -53,15 +53,15 @@
         "id": "upload_error.video_duration_limit"
       },
       {
-        "defaultMessage": "You must schedule a nexit at least 5 minutes out.",
+        "defaultMessage": "You must schedule a Nexit at least 5 minutes out.",
         "id": "compose.invalid_schedule"
       },
       {
-        "defaultMessage": "Your nexit was sent",
+        "defaultMessage": "Your Nexit was sent",
         "id": "compose.submit_success"
       },
       {
-        "defaultMessage": "Your nexit was edited",
+        "defaultMessage": "Your Nexit was edited",
         "id": "compose.edit_success"
       },
       {
@@ -190,15 +190,15 @@
         "id": "admin.users.user_deleted_message"
       },
       {
-        "defaultMessage": "Delete nexit",
+        "defaultMessage": "Delete Nexit",
         "id": "confirmations.admin.delete_status.heading"
       },
       {
-        "defaultMessage": "You are about to delete a nexit by @{acct}. This action cannot be undone.",
+        "defaultMessage": "You are about to delete a Nexit by @{acct}. This action cannot be undone.",
         "id": "confirmations.admin.delete_status.message"
       },
       {
-        "defaultMessage": "Delete nexit",
+        "defaultMessage": "Delete Nexit",
         "id": "confirmations.admin.delete_status.confirm"
       },
       {
@@ -218,27 +218,27 @@
         "id": "admin.statuses.status_deleted_message"
       },
       {
-        "defaultMessage": "Mark nexit sensitive",
+        "defaultMessage": "Mark Nexit sensitive",
         "id": "confirmations.admin.mark_status_sensitive.heading"
       },
       {
-        "defaultMessage": "Mark nexit not sensitive.",
+        "defaultMessage": "Mark Nexit not sensitive.",
         "id": "confirmations.admin.mark_status_not_sensitive.heading"
       },
       {
-        "defaultMessage": "You are about to mark a nexit by @{acct} sensitive.",
+        "defaultMessage": "You are about to mark a Nexit by @{acct} sensitive.",
         "id": "confirmations.admin.mark_status_sensitive.message"
       },
       {
-        "defaultMessage": "You are about to mark a nexit by @{acct} not sensitive.",
+        "defaultMessage": "You are about to mark a Nexit by @{acct} not sensitive.",
         "id": "confirmations.admin.mark_status_not_sensitive.message"
       },
       {
-        "defaultMessage": "Mark nexit sensitive",
+        "defaultMessage": "Mark Nexit sensitive",
         "id": "confirmations.admin.mark_status_sensitive.confirm"
       },
       {
-        "defaultMessage": "Mark nexit not sensitive",
+        "defaultMessage": "Mark Nexit not sensitive",
         "id": "confirmations.admin.mark_status_not_sensitive.confirm"
       },
       {
@@ -534,19 +534,19 @@
         "id": "confirmations.delete.confirm"
       },
       {
-        "defaultMessage": "Cancel nexit editing",
+        "defaultMessage": "Cancel Nexit editing",
         "id": "confirmations.cancel_editing.heading"
       },
       {
-        "defaultMessage": "Delete nexit",
+        "defaultMessage": "Delete Nexit",
         "id": "confirmations.delete.heading"
       },
       {
-        "defaultMessage": "Are you sure you want to cancel editing this nexit? All changes will be lost.",
+        "defaultMessage": "Are you sure you want to cancel editing this Nexit? All changes will be lost.",
         "id": "confirmations.cancel_editing.message"
       },
       {
-        "defaultMessage": "Are you sure you want to delete this nexit?",
+        "defaultMessage": "Are you sure you want to delete this Nexit?",
         "id": "confirmations.delete.message"
       }
     ],
@@ -623,7 +623,7 @@
         "id": "reply_mentions.reply"
       },
       {
-        "defaultMessage": "Replying to nexit",
+        "defaultMessage": "Replying to Nexit",
         "id": "reply_mentions.reply_empty"
       },
       {
@@ -921,7 +921,7 @@
         "id": "status.cancel_reblog_private"
       },
       {
-        "defaultMessage": "This nexit cannot be renexited",
+        "defaultMessage": "This Nexit cannot be renexited",
         "id": "status.cannot_reblog"
       },
       {
@@ -929,7 +929,7 @@
         "id": "status.favourite"
       },
       {
-        "defaultMessage": "Expand this nexit",
+        "defaultMessage": "Expand this Nexit",
         "id": "status.open"
       },
       {
@@ -969,11 +969,11 @@
         "id": "status.admin_account"
       },
       {
-        "defaultMessage": "Open this nexit in the moderation interface",
+        "defaultMessage": "Open this Nexit in the moderation interface",
         "id": "status.admin_status"
       },
       {
-        "defaultMessage": "Copy link to nexit",
+        "defaultMessage": "Copy link to Nexit",
         "id": "status.copy"
       },
       {
@@ -981,7 +981,7 @@
         "id": "status.remove_account_from_group"
       },
       {
-        "defaultMessage": "Remove nexit from group",
+        "defaultMessage": "Remove Nexit from group",
         "id": "status.remove_post_from_group"
       },
       {
@@ -993,15 +993,15 @@
         "id": "admin.users.actions.delete_user"
       },
       {
-        "defaultMessage": "Delete nexit",
+        "defaultMessage": "Delete Nexit",
         "id": "admin.statuses.actions.delete_status"
       },
       {
-        "defaultMessage": "Mark nexit sensitive",
+        "defaultMessage": "Mark Nexit sensitive",
         "id": "admin.statuses.actions.mark_status_sensitive"
       },
       {
-        "defaultMessage": "Mark nexit not sensitive",
+        "defaultMessage": "Mark Nexit not sensitive",
         "id": "admin.statuses.actions.mark_status_not_sensitive"
       },
       {
@@ -1029,7 +1029,7 @@
         "id": "status.reactions.weary"
       },
       {
-        "defaultMessage": "Quote nexit",
+        "defaultMessage": "Quote Nexit",
         "id": "status.quote"
       },
       {
@@ -1037,11 +1037,11 @@
         "id": "confirmations.delete.confirm"
       },
       {
-        "defaultMessage": "Delete nexit",
+        "defaultMessage": "Delete Nexit",
         "id": "confirmations.delete.heading"
       },
       {
-        "defaultMessage": "Are you sure you want to delete this nexit?",
+        "defaultMessage": "Are you sure you want to delete this Nexit?",
         "id": "confirmations.delete.message"
       },
       {
@@ -1049,7 +1049,7 @@
         "id": "confirmations.redraft.confirm"
       },
       {
-        "defaultMessage": "Are you sure you want to delete this nexit and re-draft it? Favorites and renexits will be lost, and replies to the original nexit will be orphaned.",
+        "defaultMessage": "Are you sure you want to delete this Nexit and re-draft it? Favorites and renexits will be lost, and replies to the original Nexit will be orphaned.",
         "id": "confirmations.redraft.message"
       },
       {
@@ -1086,7 +1086,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "Replying to nexit",
+        "defaultMessage": "Replying to Nexit",
         "id": "reply_mentions.reply_empty"
       },
       {
@@ -1115,7 +1115,7 @@
         "id": "statuses.quote_tombstone"
       },
       {
-        "defaultMessage": "Pinned nexit",
+        "defaultMessage": "Pinned Nexit",
         "id": "status.pinned"
       }
     ],
@@ -1166,7 +1166,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "One or more nexits are unavailable.",
+        "defaultMessage": "One or more Nexits are unavailable.",
         "id": "statuses.tombstone"
       }
     ],
@@ -1323,7 +1323,7 @@
         "id": "empty_column.account_unavailable"
       },
       {
-        "defaultMessage": "No nexits here!",
+        "defaultMessage": "No Nexits here!",
         "id": "empty_column.account_timeline"
       }
     ],
@@ -1672,11 +1672,11 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "View nexit",
+        "defaultMessage": "View Nexit",
         "id": "admin.reports.actions.view_status"
       },
       {
-        "defaultMessage": "Delete nexit",
+        "defaultMessage": "Delete Nexit",
         "id": "admin.statuses.actions.delete_status"
       }
     ],
@@ -1825,7 +1825,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "Sponsored nexit",
+        "defaultMessage": "Sponsored Nexit",
         "id": "sponsored.subtitle"
       },
       {
@@ -2352,7 +2352,7 @@
         "id": "compose_form.save_changes"
       },
       {
-        "defaultMessage": "You have scheduled nexits. {click_here} to see them.",
+        "defaultMessage": "You have scheduled Nexits. {click_here} to see them.",
         "id": "compose_form.scheduled_statuses.message"
       },
       {
@@ -2473,7 +2473,7 @@
         "id": "privacy.unlisted.short"
       },
       {
-        "defaultMessage": "Do not nexit to public timelines",
+        "defaultMessage": "Do not Nexit to public timelines",
         "id": "privacy.unlisted.long"
       },
       {
@@ -2501,7 +2501,7 @@
         "id": "privacy.direct.long"
       },
       {
-        "defaultMessage": "Adjust nexit privacy",
+        "defaultMessage": "Adjust Nexit privacy",
         "id": "privacy.change"
       }
     ],
@@ -2510,7 +2510,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "Replying to nexit",
+        "defaultMessage": "Replying to Nexit",
         "id": "reply_mentions.reply_empty"
       },
       {
@@ -2527,7 +2527,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "Schedule nexit for later",
+        "defaultMessage": "Schedule Nexit for later",
         "id": "schedule_button.add_schedule"
       },
       {
@@ -2548,7 +2548,7 @@
         "id": "schedule.remove"
       },
       {
-        "defaultMessage": "Scheduled to nexit at…",
+        "defaultMessage": "Scheduled to Nexit at…",
         "id": "datepicker.hint"
       }
     ],
@@ -2573,7 +2573,7 @@
         "id": "empty_column.search.accounts"
       },
       {
-        "defaultMessage": "There are no nexits results for \"{term}\"",
+        "defaultMessage": "There are no Nexits results for \"{term}\"",
         "id": "empty_column.search.statuses"
       },
       {
@@ -2581,7 +2581,7 @@
         "id": "empty_column.search.hashtags"
       },
       {
-        "defaultMessage": "You are searching for nexits from @{acct}.",
+        "defaultMessage": "You are searching for Nexits from @{acct}.",
         "id": "search_results.filter_message"
       }
     ],
@@ -2668,7 +2668,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "Your account is not {locked}. Anyone can follow you to view your follower-only nexits.",
+        "defaultMessage": "Your account is not {locked}. Anyone can follow you to view your follower-only Nexits.",
         "id": "compose_form.lock_disclaimer"
       },
       {
@@ -2676,11 +2676,11 @@
         "id": "compose_form.lock_disclaimer.lock"
       },
       {
-        "defaultMessage": "This nexit won't be listed under any hashtag as it is unlisted. Only public nexits can be searched by hashtag.",
+        "defaultMessage": "This Nexit won't be listed under any hashtag as it is unlisted. Only public Nexits can be searched by hashtag.",
         "id": "compose_form.hashtag_warning"
       },
       {
-        "defaultMessage": "This nexit will only be sent to the mentioned users.",
+        "defaultMessage": "This Nexit will only be sent to the mentioned users.",
         "id": "compose_form.direct_message_warning"
       }
     ],
@@ -2925,7 +2925,7 @@
         "id": "preferences.fields.unfollow_modal_label"
       },
       {
-        "defaultMessage": "Show confirmation dialog before sending a nexit without media descriptions",
+        "defaultMessage": "Show confirmation dialog before sending a Nexit without media descriptions",
         "id": "preferences.fields.missing_description_modal_label"
       },
       {
@@ -2933,7 +2933,7 @@
         "id": "preferences.fields.reduce_motion_label"
       },
       {
-        "defaultMessage": "Always underline links in nexits",
+        "defaultMessage": "Always underline links in Nexits",
         "id": "preferences.fields.underline_links_label"
       },
       {
@@ -3352,7 +3352,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "Liked nexits",
+        "defaultMessage": "Liked Nexits",
         "id": "column.favourited_statuses"
       },
       {
@@ -3360,11 +3360,11 @@
         "id": "empty_column.account_unavailable"
       },
       {
-        "defaultMessage": "You don't have any liked nexits yet. When you like one, it will show up here.",
+        "defaultMessage": "You don't have any liked Nexits yet. When you like one, it will show up here.",
         "id": "empty_column.favourited_statuses"
       },
       {
-        "defaultMessage": "This user doesn't have any liked nexits yet.",
+        "defaultMessage": "This user doesn't have any liked Nexits yet.",
         "id": "empty_column.account_favourited_statuses"
       }
     ],
@@ -3497,7 +3497,7 @@
         "id": "column.filters.drop_header"
       },
       {
-        "defaultMessage": "Filtered nexits will disappear irreversibly, even if filter is later removed",
+        "defaultMessage": "Filtered Nexits will disappear irreversibly, even if filter is later removed",
         "id": "column.filters.drop_hint"
       },
       {
@@ -3778,7 +3778,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "There is nothing in this group yet. When members of this group make new nexits, they will appear here.",
+        "defaultMessage": "There is nothing in this group yet. When members of this group make new Nexits, they will appear here.",
         "id": "empty_column.group"
       }
     ],
@@ -4021,7 +4021,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "There is nothing in this list yet. When members of this list create new nexits, they will appear here.",
+        "defaultMessage": "There is nothing in this list yet. When members of this list create new Nexits, they will appear here.",
         "id": "empty_column.list"
       },
       {
@@ -4225,15 +4225,15 @@
         "id": "notification.mentioned"
       },
       {
-        "defaultMessage": "{name} liked your nexit",
+        "defaultMessage": "{name} liked your Nexit",
         "id": "notification.favourite"
       },
       {
-        "defaultMessage": "{name} renexited your nexit",
+        "defaultMessage": "{name} renexited your Nexit",
         "id": "notification.reblog"
       },
       {
-        "defaultMessage": "{name} just nexited",
+        "defaultMessage": "{name} just Nexited",
         "id": "notification.status"
       },
       {
@@ -4249,7 +4249,7 @@
         "id": "notification.pleroma:chat_mention"
       },
       {
-        "defaultMessage": "{name} reacted to your nexit",
+        "defaultMessage": "{name} reacted to your Nexit",
         "id": "notification.pleroma:emoji_reaction"
       },
       {
@@ -4257,7 +4257,7 @@
         "id": "notification.user_approved"
       },
       {
-        "defaultMessage": "{name} edited a nexit you interacted with",
+        "defaultMessage": "{name} edited a Nexit you interacted with",
         "id": "notification.update"
       },
       {
@@ -4416,7 +4416,7 @@
         "id": "onboarding.feeds.col2"
       },
       {
-        "defaultMessage": "Think outside the box and go explore the rest of the world: this thread displays nexits from all known instances.",
+        "defaultMessage": "Think outside the box and go explore the rest of the world: this thread displays Nexits from all known instances.",
         "id": "onboarding.feeds.col3"
       },
       {
@@ -4465,7 +4465,7 @@
         "id": "onboarding.how-it-works.username"
       },
       {
-        "defaultMessage": "Don't worry though, when writing a nexit, autosuggestion will help you find the right mention! Moreover, if you reply to a nexit, the mention will automatically be written in the right way.",
+        "defaultMessage": "Don't worry though, when writing a Nexit, autosuggestion will help you find the right mention! Moreover, if you reply to a Nexit, the mention will automatically be written in the right way.",
         "id": "onboarding.how-it-works.explanation"
       },
       {
@@ -4482,7 +4482,7 @@
         "id": "onboarding.privacy.title"
       },
       {
-        "defaultMessage": "This site offers precise control over who can see your nexits and therefore interact with you.",
+        "defaultMessage": "This site offers precise control over who can see your Nexits and therefore interact with you.",
         "id": "onboarding.privacy.description"
       },
       {
@@ -4490,7 +4490,7 @@
         "id": "onboarding.privacy.public-title"
       },
       {
-        "defaultMessage": "The nexit is displayed on all feeds, including other instances.",
+        "defaultMessage": "The Nexit is displayed on all feeds, including other instances.",
         "id": "onboarding.privacy.public-description"
       },
       {
@@ -4498,7 +4498,7 @@
         "id": "onboarding.privacy.unlisted-title"
       },
       {
-        "defaultMessage": "The nexit is public but only appears in your subscribers' feeds and on your profile",
+        "defaultMessage": "The Nexit is public but only appears in your subscribers' feeds and on your profile",
         "id": "onboarding.privacy.unlisted-description"
       },
       {
@@ -4506,7 +4506,7 @@
         "id": "onboarding.privacy.followers-title"
       },
       {
-        "defaultMessage": "The nexit is not displayed on any public feeds and is only visible to people who follow you",
+        "defaultMessage": "The Nexit is not displayed on any public feeds and is only visible to people who follow you",
         "id": "onboarding.privacy.followers-description"
       },
       {
@@ -4514,7 +4514,7 @@
         "id": "onboarding.privacy.direct-title"
       },
       {
-        "defaultMessage": "The nexit is only visible to people mentioned via @username@instance",
+        "defaultMessage": "The Nexit is only visible to people mentioned via @username@instance",
         "id": "onboarding.privacy.direct-description"
       },
       {
@@ -4556,7 +4556,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "Pinned nexits",
+        "defaultMessage": "Pinned Nexits",
         "id": "column.pins"
       },
       {
@@ -4641,11 +4641,11 @@
         "id": "preferences.fields.media_display_label"
       },
       {
-        "defaultMessage": "Default nexit privacy",
+        "defaultMessage": "Default Nexit privacy",
         "id": "preferences.fields.privacy_label"
       },
       {
-        "defaultMessage": "Default nexit format",
+        "defaultMessage": "Default Nexit format",
         "id": "preferences.fields.content_type_label"
       },
       {
@@ -4653,7 +4653,7 @@
         "id": "preferences.fields.boost_modal_label"
       },
       {
-        "defaultMessage": "Show confirmation dialog before deleting a nexit",
+        "defaultMessage": "Show confirmation dialog before deleting a Nexit",
         "id": "preferences.fields.delete_modal_label"
       },
       {
@@ -4661,11 +4661,11 @@
         "id": "preferences.fields.auto_play_gif_label"
       },
       {
-        "defaultMessage": "Always expand nexits marked with content warnings",
+        "defaultMessage": "Always expand Nexits marked with content warnings",
         "id": "preferences.fields.expand_spoilers_label"
       },
       {
-        "defaultMessage": "Automatically load new nexits when scrolled to the top of the page",
+        "defaultMessage": "Automatically load new Nexits when scrolled to the top of the page",
         "id": "preferences.fields.autoload_timelines_label"
       },
       {
@@ -4728,7 +4728,7 @@
         "id": "fediverse_tab.explanation_box.title"
       },
       {
-        "defaultMessage": "{site_title} is part of the Fediverse, a social network made up of thousands of independent social media sites (aka \"servers\"). The nexits you see here are from 3rd-party servers. You have the freedom to engage with them, or to block any server you don't like. Pay attention to the full username after the second @ symbol to know which server a nexit is from. To see only {site_title} nexits, visit {local}.",
+        "defaultMessage": "{site_title} is part of the Fediverse, a social network made up of thousands of independent social media sites (aka \"servers\"). The Nexits you see here are from 3rd-party servers. You have the freedom to engage with them, or to block any server you don't like. Pay attention to the full username after the second @ symbol to know which server a Nexit is from. To see only {site_title} Nexits, visit {local}.",
         "id": "fediverse_tab.explanation_box.explanation"
       },
       {
@@ -4800,11 +4800,11 @@
         "id": "confirmations.scheduled_status_delete.confirm"
       },
       {
-        "defaultMessage": "Cancel scheduled nexit",
+        "defaultMessage": "Cancel scheduled Nexit",
         "id": "confirmations.scheduled_status_delete.heading"
       },
       {
-        "defaultMessage": "Are you sure you want to cancel this scheduled nexit?",
+        "defaultMessage": "Are you sure you want to cancel this scheduled Nexit?",
         "id": "confirmations.scheduled_status_delete.message"
       }
     ],
@@ -5304,11 +5304,11 @@
         "id": "confirmations.delete.confirm"
       },
       {
-        "defaultMessage": "Delete nexit",
+        "defaultMessage": "Delete Nexit",
         "id": "confirmations.delete.heading"
       },
       {
-        "defaultMessage": "Are you sure you want to delete this nexit?",
+        "defaultMessage": "Are you sure you want to delete this Nexit?",
         "id": "confirmations.delete.message"
       },
       {
@@ -5320,7 +5320,7 @@
         "id": "confirmations.redraft.heading"
       },
       {
-        "defaultMessage": "Are you sure you want to delete this nexit and re-draft it? Favorites and renexits will be lost, and replies to the original nexit will be orphaned.",
+        "defaultMessage": "Are you sure you want to delete this Nexit and re-draft it? Favorites and renexits will be lost, and replies to the original Nexit will be orphaned.",
         "id": "confirmations.redraft.message"
       },
       {
@@ -5568,23 +5568,23 @@
         "id": "confirmations.cancel_editing.confirm"
       },
       {
-        "defaultMessage": "Cancel nexit editing",
+        "defaultMessage": "Cancel Nexit editing",
         "id": "confirmations.cancel_editing.heading"
       },
       {
-        "defaultMessage": "Delete nexit",
+        "defaultMessage": "Delete Nexit",
         "id": "confirmations.delete.heading"
       },
       {
-        "defaultMessage": "Are you sure you want to cancel editing this nexit? All changes will be lost.",
+        "defaultMessage": "Are you sure you want to cancel editing this Nexit? All changes will be lost.",
         "id": "confirmations.cancel_editing.message"
       },
       {
-        "defaultMessage": "Are you sure you want to delete this nexit?",
+        "defaultMessage": "Are you sure you want to delete this Nexit?",
         "id": "confirmations.delete.message"
       },
       {
-        "defaultMessage": "Edit nexit",
+        "defaultMessage": "Edit Nexit",
         "id": "navigation_bar.compose_edit"
       },
       {
@@ -5592,15 +5592,15 @@
         "id": "navigation_bar.compose_direct"
       },
       {
-        "defaultMessage": "Reply to nexit",
+        "defaultMessage": "Reply to Nexit",
         "id": "navigation_bar.compose_reply"
       },
       {
-        "defaultMessage": "Quote nexit",
+        "defaultMessage": "Quote Nexit",
         "id": "navigation_bar.compose_quote"
       },
       {
-        "defaultMessage": "Compose new nexit",
+        "defaultMessage": "Compose new Nexit",
         "id": "navigation_bar.compose"
       }
     ],
@@ -5656,11 +5656,11 @@
         "id": "edit_federation.force_nsfw"
       },
       {
-        "defaultMessage": "Force nexits unlisted",
+        "defaultMessage": "Force Nexits unlisted",
         "id": "edit_federation.unlisted"
       },
       {
-        "defaultMessage": "Hide nexits except to followers",
+        "defaultMessage": "Hide Nexits except to followers",
         "id": "edit_federation.followers_only"
       },
       {
@@ -5685,7 +5685,7 @@
         "id": "status.embed"
       },
       {
-        "defaultMessage": "Embed this nexit on your website by copying the code below.",
+        "defaultMessage": "Embed this Nexit on your website by copying the code below.",
         "id": "embed.instructions"
       }
     ],
@@ -5707,7 +5707,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "No one has liked this nexit yet. When someone does, they will show up here.",
+        "defaultMessage": "No one has liked this Nexit yet. When someone does, they will show up here.",
         "id": "empty_column.favourites"
       },
       {
@@ -5765,7 +5765,7 @@
         "id": "keyboard_shortcuts.boost"
       },
       {
-        "defaultMessage": "to open nexit",
+        "defaultMessage": "to open Nexit",
         "id": "keyboard_shortcuts.enter"
       },
       {
@@ -5793,7 +5793,7 @@
         "id": "keyboard_shortcuts.compose"
       },
       {
-        "defaultMessage": "to start a new nexit",
+        "defaultMessage": "to start a new Nexit",
         "id": "keyboard_shortcuts.toot"
       },
       {
@@ -5821,7 +5821,7 @@
         "id": "keyboard_shortcuts.favourites"
       },
       {
-        "defaultMessage": "to open pinned nexits list",
+        "defaultMessage": "to open pinned Nexits list",
         "id": "keyboard_shortcuts.pinned"
       },
       {
@@ -5876,7 +5876,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "Mangane config",
+        "defaultMessage": "NexUI config",
         "id": "navigation_bar.soapbox_config"
       },
       {
@@ -6279,7 +6279,7 @@
         "id": "reactions.all"
       },
       {
-        "defaultMessage": "No one has reacted to this nexit yet. When someone does, they will show up here.",
+        "defaultMessage": "No one has reacted to this Nexit yet. When someone does, they will show up here.",
         "id": "status.reactions.empty"
       },
       {
@@ -6292,7 +6292,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "No one has renexited this nexit yet. When someone does, they will show up here.",
+        "defaultMessage": "No one has renexited this Nexit yet. When someone does, they will show up here.",
         "id": "status.reblogs.empty"
       },
       {
@@ -6398,7 +6398,7 @@
         "id": "remote_interaction.follow"
       },
       {
-        "defaultMessage": "Reply to a nexit remotely",
+        "defaultMessage": "Reply to a Nexit remotely",
         "id": "remote_interaction.reply_title"
       },
       {
@@ -6406,7 +6406,7 @@
         "id": "remote_interaction.reply"
       },
       {
-        "defaultMessage": "Reblog a nexit remotely",
+        "defaultMessage": "Reblog a Nexit remotely",
         "id": "remote_interaction.reblog_title"
       },
       {
@@ -6414,7 +6414,7 @@
         "id": "remote_interaction.reblog"
       },
       {
-        "defaultMessage": "Like a nexit remotely",
+        "defaultMessage": "Like a Nexit remotely",
         "id": "remote_interaction.favourite_title"
       },
       {

@@ -87,20 +87,8 @@ const AccountCard: React.FC<IAccountCard> = ({ id }) => {
           <Text weight='bold' size='lg' className='leading-5'><FormattedNumber value={account.statuses_count} /></Text>
         </div>
         <div className='accounts-table__count text-right'>
-          <Text theme='primary' size='xs'><FormattedMessage id='account.last_status' defaultMessage='Last active' /></Text>
-          {account.last_status_at === null
-            ? <Text weight='bold' size='lg' className='leading-5'><FormattedMessage id='account.never_active' defaultMessage='Never' /></Text>
-            : <Text weight='bold' size='lg' className='leading-5'>
-              {
-                (ago < 1) && <FormattedMessage {...messages.today} />
-              }
-              {
-                (ago >= 1 && ago < 2) && <FormattedMessage {...messages.yesterday} />
-              }
-              {
-                ago >= 2 && <>{ ago } <FormattedMessage {...messages.days} /></>
-              }
-            </Text>}
+          <Text theme='primary' size='xs'><FormattedMessage id='account.followers' defaultMessage='Followers' /></Text>
+          <Text weight='bold' size='lg' className='leading-5'>{account.followers_count}</Text>
         </div>
       </div>
     </div>

@@ -13,14 +13,13 @@ import type { Menu } from 'soapbox/components/dropdown_menu';
 
 const messages = defineMessages({
   follow_requests: { id: 'navigation_bar.follow_requests', defaultMessage: 'Follow requests' },
-  bookmarks: { id: 'column.bookmarks', defaultMessage: 'Bookmarks' },
-  lists: { id: 'column.lists', defaultMessage: 'Lists' },
   developers: { id: 'navigation.developers', defaultMessage: 'Developers' },
   dashboard: { id: 'tabs_bar.dashboard', defaultMessage: 'Dashboard' },
-  all: { id: 'tabs_bar.all', defaultMessage: 'All' },
-  fediverse: { id: 'tabs_bar.fediverse', defaultMessage: 'Explore' },
+  all: { id: 'tabs_bar.all', defaultMessage: 'Explore' },
+  fediverse: { id: 'tabs_bar.fediverse', defaultMessage: 'Fediverse' },
   settings: { id: 'tabs_bar.settings', defaultMessage: 'Settings' },
   directory: { id: 'navigation_bar.profile_directory', defaultMessage: 'Profile directory' },
+
 });
 
 /** Desktop sidebar with links to different views in the app. */
@@ -52,19 +51,11 @@ const SidebarNavigation = () => {
         });
       }
 
-      if (features.bookmarks) {
+      if (features.federating) {
         menu.push({
-          to: '/bookmarks',
-          text: intl.formatMessage(messages.bookmarks),
-          icon: require('@tabler/icons/bookmark.svg'),
-        });
-      }
-
-      if (features.lists) {
-        menu.push({
-          to: '/lists',
-          text: intl.formatMessage(messages.lists),
-          icon: require('@tabler/icons/list.svg'),
+          to: '/timeline/fediverse',
+          text: intl.formatMessage(messages.fediverse),
+          icon: !bubbleTimeline ? require('icons/fediverse.svg') : require('@tabler/icons/hexagon.svg'),
         });
       }
 
@@ -72,7 +63,7 @@ const SidebarNavigation = () => {
         menu.push({
           to: '/directory',
           text: intl.formatMessage(messages.directory),
-          icon: require('@tabler/icons/folder.svg'),
+          icon: require('@tabler/icons/users.svg'),
         });
       }
 
@@ -131,31 +122,11 @@ const SidebarNavigation = () => {
           text={<FormattedMessage id='tabs_bar.home' defaultMessage='Home' />}
         />
 
-        {
-          features.federating ? (
-            <SidebarNavigationLink
-              icon={logo}
-              text={<>{instance.get('title')}</>}
-              to='/timeline/local'
-            />
-          ) : (
-            <SidebarNavigationLink
-              icon={require('@tabler/icons/world.svg')}
-              text={<FormattedMessage id='tabs_bar.all' defaultMessage='All' />}
-              to='/timeline/local'
-            />
-          )
-        }
-
-        {
-          features.federating && (
-            <SidebarNavigationLink
-              icon={!bubbleTimeline ? require('icons/fediverse.svg') : require('@tabler/icons/hexagon.svg')}
-              text={<FormattedMessage id='tabs_bar.fediverse' defaultMessage='Explore' />}
-              to='/timeline/fediverse'
-            />
-          )
-        }
+        <SidebarNavigationLink
+          to='/search'
+          icon={require('@tabler/icons/search.svg')}
+          text={<FormattedMessage id='tabs_bar.search' defaultMessage='Search' />}
+        />
 
         {account && (
           <>
@@ -169,6 +140,46 @@ const SidebarNavigation = () => {
             {renderMessagesLink()}
           </>
         )}
+
+        {
+          features.lists && (
+            <SidebarNavigationLink
+              icon={require('@tabler/icons/list.svg')}
+              text={<FormattedMessage id='column.lists' defaultMessage='Lists' />}
+              to='/lists'
+            />
+          )
+        }
+
+        {
+          features.bookmarks && (
+            <SidebarNavigationLink
+              icon={require('@tabler/icons/bookmark.svg')}
+              text={<FormattedMessage id='column.bookmarks' defaultMessage='Bookmarks' />}
+              to='/bookmarks'
+            />
+          )
+        }
+
+        {
+          features.federating && (
+            <SidebarNavigationLink
+              icon={require('@tabler/icons/world.svg')}
+              text={<FormattedMessage id='tabs_bar.all' defaultMessage='Explore' />}
+              to='/timeline/local'
+            />
+          )
+        }
+
+        {
+          account && (
+            <SidebarNavigationLink
+              icon={require('@tabler/icons/user.svg')}
+              text={<FormattedMessage id='account.profile' defaultMessage='Profile' />}
+              to={`/@${account.acct}`}
+            />
+          )
+        }
 
         {menu.length > 0 && (
           <DropdownMenu items={menu}>

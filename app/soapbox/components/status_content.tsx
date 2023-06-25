@@ -42,26 +42,29 @@ interface ISpoilerButton {
 
 /** Button to expand status text behind a content warning */
 const SpoilerButton: React.FC<ISpoilerButton> = ({ onClick, hidden, tabIndex }) => (
-  <button
-    tabIndex={tabIndex}
-    className={classNames(
-      'inline-block rounded-md px-1.5 py-0.5 ml-[0.5em]',
-      'text-black dark:text-white',
-      'font-bold text-[11px] uppercase',
-      'bg-primary-100 dark:bg-primary-900',
-      'hover:bg-primary-300 dark:hover:bg-primary-600',
-      'focus:bg-primary-200 dark:focus:bg-primary-600',
-      'hover:no-underline',
-      'duration-100',
-    )}
-    onClick={onClick}
-  >
-    {hidden ? (
-      <FormattedMessage id='status.show_more' defaultMessage='Show more' />
-    ) : (
-      <FormattedMessage id='status.show_less' defaultMessage='Show less' />
-    )}
-  </button>
+  <>
+    <br />
+    <button
+      tabIndex={tabIndex}
+      className={classNames(
+        'inline-block rounded-md px-4 py-2',
+        'text-black dark:text-white',
+        'font-bold text-[11px] uppercase',
+        'bg-primary-100 dark:bg-primary-900',
+        'hover:bg-primary-300 dark:hover:bg-primary-600',
+        'focus:bg-primary-200 dark:focus:bg-primary-600',
+        'hover:no-underline',
+        'duration-100',
+      )}
+      onClick={onClick}
+    >
+      {hidden ? (
+        <FormattedMessage id='status.show_more' defaultMessage='Show more' />
+      ) : (
+        <FormattedMessage id='status.show_less' defaultMessage='Show less' />
+      )}
+    </button>
+  </>
 );
 
 interface IStatusContent {

@@ -111,17 +111,6 @@ export const ReducerRecord = ImmutableRecord({
 type State = ReturnType<typeof ReducerRecord>;
 type Poll = ReturnType<typeof PollRecord>;
 
-const statusToTextMentions = (state: State, status: ImmutableMap<string, any>, account: AccountEntity) => {
-  const author = status.getIn(['account', 'acct']);
-  const mentions = status.get('mentions')?.map((m: ImmutableMap<string, any>) => m.get('acct')) || [];
-
-  return ImmutableOrderedSet([author])
-    .concat(mentions)
-    .delete(account.acct)
-    .map(m => `@${m} `)
-    .join('');
-};
-
 export const statusToMentionsArray = (status: ImmutableMap<string, any>, account: AccountEntity) => {
   const author = status.getIn(['account', 'acct']) as string;
   const mentions = status.get('mentions')?.map((m: ImmutableMap<string, any>) => m.get('acct')) || [];
@@ -334,7 +323,7 @@ export default function compose(state = ReducerRecord({ idempotencyKey: uuid(), 
       return state.withMutations(map => {
         map.set('in_reply_to', action.status.get('id'));
         map.set('to', action.explicitAddressing ? statusToMentionsArray(action.status, action.account) : ImmutableOrderedSet<string>());
-        map.set('text', !action.explicitAddressing ? statusToTextMentions(state, action.status, action.account) : '');
+        map.set('text', '');
         map.set('privacy', privacyPreference(action.status.visibility, state.default_privacy));
         map.set('focusDate', new Date());
         map.set('caretPosition', null);
