@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": "app/",
+    "outDir": "build/",
+    "sourceMap": true,
+    "strict": false,
+    "module": "es2022",
+    "lib": ["es2019", "es6", "dom", "webworker"],
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "typeRoots": [ "./types", "./node_modules/@types"],
+    "types": ["node", "jest", "@testing-library/jest-dom"]
+  }
+}

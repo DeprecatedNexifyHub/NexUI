@@ -1,0 +1,30 @@
+.emoji-picker {
+
+  &.bg-gray-800 {
+    --tw-bg-opacity: 0.8;
+  }
+
+  @media screen and (max-width: 630px) {
+    & > div {
+      height: 100vh;
+
+      & > div:last-of-type {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  em-emoji-picker {
+    --border-radius: 0px;
+    @media screen and (max-width: 630px) {
+      flex-grow: 1;
+      width: 100vw;
+    }
+  }
+}
+
+.dark .emoji-picker em-emoji-picker {
+  --rgb-background: 30, 41, 59;
+}

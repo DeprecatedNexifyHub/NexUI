@@ -1,0 +1,16 @@
+.media-panel {
+  &__content {
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__empty {
+    font-size: 14px;
+    color: var(--primary-text-color--faint);
+  }
+}
