@@ -45,33 +45,14 @@ const ThumbNavigation: React.FC = (): JSX.Element => {
       {
         features.federating ? (
           <ThumbNavigationLink
-            src={logo}
-            text={instance.get('title')}
-            to='/timeline/local'
-            exact
-          />
-        ) : (
-          <ThumbNavigationLink
             src={require('@tabler/icons/world.svg')}
             text={<FormattedMessage id='tabs_bar.all' defaultMessage='All' />}
             to='/timeline/local'
             exact
           />
-        )
+        ) : null
       }
 
-      {
-        features.federating && (
-          <ThumbNavigationLink
-            src={!bubbleTimeline ? require('icons/fediverse.svg') : require('@tabler/icons/hexagon.svg')}
-            text={<FormattedMessage id='tabs_bar.fediverse' defaultMessage='Explore' />}
-            to='/timeline/fediverse'
-            exact
-          />
-        )
-      }
-
-      {account && renderMessagesLink()}
 
       {account && (
         <ThumbNavigationLink
@@ -82,6 +63,8 @@ const ThumbNavigation: React.FC = (): JSX.Element => {
           count={notificationCount}
         />
       )}
+
+      {account && renderMessagesLink()}
 
     </div>
   );

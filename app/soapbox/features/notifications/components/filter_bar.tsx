@@ -108,7 +108,7 @@ const NotificationFilterBar = () => {
 
   return (
     <>
-      <div className='flex justify-between items-center mb-2'>
+      <div className='flex justify-between items-center mb-2 hidden' hidden>
         <Icon className='h-6 w-6 text-gray-500 dark:text-gray-400' src={require('@tabler/icons/bell.svg')} />
         <ClearColumnButton onClick={onClear} />
       </div>

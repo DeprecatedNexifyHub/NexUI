@@ -13,6 +13,10 @@ import ProfileFamiliarFollowers from './profile_familiar_followers';
 import ProfileStats from './profile_stats';
 
 import type { Account } from 'soapbox/types/entities';
+import { ProfileFieldsPanel } from '../util/async-components';
+
+import BundleContainer from 'soapbox/features/ui/containers/bundle_container';
+import classNames from 'classnames';
 
 /** Basically ensure the URL isn't `javascript:alert('hi')` or something like that */
 const isSafeUrl = (text: string): boolean => {
@@ -79,7 +83,7 @@ const ProfileInfoPanel: React.FC<IProfileInfoPanel> = ({ account, username }) =>
 
     const formattedBirthday = intl.formatDate(birthday, { timeZone: 'UTC', day: 'numeric', month: 'long', year: 'numeric' });
 
-    const date  = new Date(birthday);
+    const date = new Date(birthday);
     const today = new Date();
 
     const hasBirthday = date.getDate() === today.getDate() && date.getMonth() === today.getMonth();
@@ -222,6 +226,25 @@ const ProfileInfoPanel: React.FC<IProfileInfoPanel> = ({ account, username }) =>
           ) : null}
 
           {renderBirthday()}
+        </div>
+
+        <div className='flex gap-4'>
+          {account.fields.map((field, i) => (
+            <dl>
+              <dt title={field.name}>
+                <Text weight='bold' tag='span' dangerouslySetInnerHTML={{ __html: field.name_emojified }} />
+              </dt>
+
+              <dd
+                className={classNames({ 'text-success-500': field.verified_at })}
+                title={field.value_plain}
+              >
+                <HStack space={2} alignItems='center'>
+                  <Text className='break-words overflow-hidden' tag='span' dangerouslySetInnerHTML={{ __html: field.value_emojified }} />
+                </HStack>
+              </dd>
+            </dl>
+          ))}
         </div>
 
         <ProfileFamiliarFollowers account={account} />

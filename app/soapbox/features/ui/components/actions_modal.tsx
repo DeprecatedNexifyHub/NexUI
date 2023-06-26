@@ -37,7 +37,8 @@ const ActionsModal: React.FC<IActionsModal> = ({ status, actions, onClick, onClo
           {...compProps}
           rel='noopener'
           data-index={i}
-          className={classNames({ active, destructive })}
+          className={classNames({ active, destructive }, 'w-full')}
+          style={{ 'backgroundColor': 'rgb(30 41 59 / var(--tw-bg-opacity))' }}
           data-method={isLogout ? 'delete' : null}
         >
           {icon && <Icon title={text} src={icon} role='presentation' tabIndex={-1} />}
@@ -73,7 +74,7 @@ const ActionsModal: React.FC<IActionsModal> = ({ status, actions, onClick, onClo
             <li className='dropdown-menu__separator' />
 
             <li>
-              <button type='button' onClick={onClose}>
+              <button type='button' onClick={onClose} style={{ 'backgroundColor': 'rgb(30 41 59 / var(--tw-bg-opacity))' }}>
                 <FormattedMessage id='lightbox.close' defaultMessage='Cancel' />
               </button>
             </li>

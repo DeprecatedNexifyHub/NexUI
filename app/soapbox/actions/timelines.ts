@@ -183,7 +183,8 @@ const expandTimeline = (timelineId: string, path: string, params: Record<string,
 
 const expandHomeTimeline = ({ accountId, maxId }: Record<string, any> = {}, done = noOp) => {
   const endpoint = accountId ? `/api/v1/accounts/${accountId}/statuses` : '/api/v1/timelines/home';
-  const params: any = { max_id: maxId };
+  const params: any = { max_id: maxId, reply_visibility: 'self' };
+  
   if (accountId) {
     params.exclude_replies = true;
     params.with_muted = true;

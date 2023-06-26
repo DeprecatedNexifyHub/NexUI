@@ -6,19 +6,27 @@ import { fetchRelationships } from 'soapbox/actions/accounts';
 import { fetchSuggestionsForTimeline } from 'soapbox/actions/suggestions';
 import { expandHomeTimeline } from 'soapbox/actions/timelines';
 import PullToRefresh from 'soapbox/components/pull-to-refresh';
-import { Column, Stack, Text } from 'soapbox/components/ui';
+import { Column, Stack, Tabs, Text } from 'soapbox/components/ui';
 import Timeline from 'soapbox/features/ui/components/timeline';
-import { useAppSelector, useAppDispatch, useFeatures } from 'soapbox/hooks';
+import { useAppSelector, useAppDispatch, useFeatures, useSettings } from 'soapbox/hooks';
 
 import { clearFeedAccountId } from '../../actions/timelines';
+import CommunityTimeline from '../community_timeline';
+
+import type { Item } from 'soapbox/components/ui/tabs/tabs';
+import { AppDispatch } from 'soapbox/store';
+import { saveSettings } from 'soapbox/actions/settings';
 
 const messages = defineMessages({
   title: { id: 'column.home', defaultMessage: 'Home' },
+  all: { id: 'reactions.all', defaultMessage: 'All' },
+  following: { id: 'column.following', defaultMessage: 'Following' },
 });
 
 const HomeTimeline: React.FC = () => {
   const intl = useIntl();
   const dispatch = useAppDispatch();
+  const settings = useSettings();
   const features = useFeatures();
 
   const currentAccountId = useAppSelector(state => state.timelines.get('home')?.feedAccountId as string | undefined);

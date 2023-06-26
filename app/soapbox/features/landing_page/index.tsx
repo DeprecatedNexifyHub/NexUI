@@ -29,7 +29,7 @@ const LandingPage = () => {
   const staffAccounts = React.useMemo(() => {
     // eslint-disable-next-line eqeqeq
     if (accounts == null) return [];
-    const a =  Object.values(accounts?.toJSON()).filter((a) => a.admin || a.moderator);
+    const a = Object.values(accounts?.toJSON()).filter((a) => a.admin || a.moderator && a.acct !== 'Admin');
     return a;
   }, [accounts]);
 
@@ -174,9 +174,6 @@ const LandingPage = () => {
                       <FormattedMessage id='landingPage.admins' defaultMessage='Moderators' />
                     </h2>
                   </div>
-                  <a href={`mailto:${instance.email}`}>
-                    {instance.email}
-                  </a>
                   <Stack space={3} className='mt-4'>
                     {
                       staffAccounts.map((s) => <Account key={s.id} hideActions account={s} />)

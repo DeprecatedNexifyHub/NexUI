@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { defineMessages, useIntl, FormattedMessage } from 'react-intl';
 import { useDispatch } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
@@ -38,6 +38,11 @@ const messages = defineMessages({
   direct: { id: 'column.direct', defaultMessage: 'Direct messages' },
   directory: { id: 'navigation_bar.profile_directory', defaultMessage: 'Profile directory' },
   dashboard: { id: 'tabs_bar.dashboard', defaultMessage: 'Dashboard' },
+  search: { id: 'tabs_bar.search', defaultMessage: 'Search' },
+  home: { id: 'tabs_bar.home', defaultMessage: 'Home' },
+  chats: { id: 'tabs_bar.chats', defaultMessage: 'Chats' },
+  notifications: { id: 'tabs_bar.notifications', defaultMessage: 'Notifications' },
+  fediverse: { id: 'tabs_bar.fediverse', defaultMessage: 'Fediverse' },
 });
 
 interface ISidebarLink {
@@ -134,6 +139,10 @@ const SidebarMenu: React.FC = (): JSX.Element | null => {
     dispatch(fetchOwnAccounts());
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = sidebarOpen ? 'hidden' : 'unset';
+  }, [sidebarOpen]);
+
   if (!account) return null;
 
   return (
@@ -210,21 +219,39 @@ const SidebarMenu: React.FC = (): JSX.Element | null => {
               <Stack space={2}>
                 <hr />
 
+                {/*
+
+                <SidebarLink
+                  to='/'
+                  icon={require('@tabler/icons/home.svg')}
+                  text={intl.formatMessage(messages.home)}
+                  onClick={onClose}
+                />
+
+                <SidebarLink
+                  to='/search'
+                  icon={require('@tabler/icons/search.svg')}
+                  text={intl.formatMessage(messages.search)}
+                  onClick={onClose}
+                />
+
+                <SidebarLink
+                  to='/notifications'
+                  icon={require('@tabler/icons/bell.svg')}
+                  text={intl.formatMessage(messages.notifications)}
+                  onClick={onClose}
+                />
+
+                {renderMessagesLink()}
+
+                  */}
+
                 <SidebarLink
                   to={`/@${account.acct}`}
                   icon={require('@tabler/icons/user.svg')}
                   text={intl.formatMessage(messages.profile)}
                   onClick={onClose}
                 />
-
-                {features.bookmarks && (
-                  <SidebarLink
-                    to='/bookmarks'
-                    icon={require('@tabler/icons/bookmark.svg')}
-                    text={intl.formatMessage(messages.bookmarks)}
-                    onClick={onClose}
-                  />
-                )}
 
                 {features.lists && (
                   <SidebarLink
@@ -235,14 +262,71 @@ const SidebarMenu: React.FC = (): JSX.Element | null => {
                   />
                 )}
 
+                {features.bookmarks && (
+                  <SidebarLink
+                    to='/bookmarks'
+                    icon={require('@tabler/icons/bookmark.svg')}
+                    text={intl.formatMessage(messages.bookmarks)}
+                    onClick={onClose}
+                  />
+                )}
+
                 {features.profileDirectory && (
                   <SidebarLink
                     to='/directory'
-                    icon={require('@tabler/icons/folder.svg')}
+                    icon={require('@tabler/icons/users.svg')}
                     text={intl.formatMessage(messages.directory)}
                     onClick={onClose}
                   />
                 )}
+
+                {features.federating && (
+                  <SidebarLink
+                    to='/timeline/fediverse'
+                    icon={!bubbleTimeline ? require('icons/fediverse.svg') : require('@tabler/icons/hexagon.svg')}
+                    text={intl.formatMessage(messages.fediverse)}
+                    onClick={onClose}
+                  />
+                )}
+
+                {/*
+                  features.federating && (
+                    <SidebarLink
+                      to='/timeline/local'
+                      icon={require('@tabler/icons/world.svg')}
+                      text={<FormattedMessage id='tabs_bar.all' defaultMessage='Explore' />}
+                      onClick={onClose}
+                    />
+                  )
+                  */}
+
+                <hr />
+
+                {
+                  (account.locked || followRequestsCount > 0) &&
+                  <SidebarLink
+                    to='/follow_requests'
+                    icon={require('@tabler/icons/user-plus.svg')}
+                    text={intl.formatMessage(messages.follow_requests)}
+                    onClick={onClose}
+                  />
+                }
+
+                <SidebarLink
+                  to='/settings/preferences'
+                  icon={require('@tabler/icons/settings.svg')}
+                  text={intl.formatMessage(messages.preferences)}
+                  onClick={onClose}
+                />
+
+                <SidebarLink
+                  to='/logout'
+                  icon={require('@tabler/icons/logout.svg')}
+                  text={intl.formatMessage(messages.logout)}
+                  onClick={onClickLogOut}
+                />
+
+                {account.staff || account.admin ? <hr /> : null}
 
                 {settings.get('isDeveloper') && (
                   <SidebarLink
@@ -252,45 +336,6 @@ const SidebarMenu: React.FC = (): JSX.Element | null => {
                     onClick={onClose}
                   />
                 )}
-
-                {features.publicTimeline && <>
-                  <hr className='dark:border-slate-700' />
-
-                  <SidebarLink
-                    to='/timeline/local'
-                    icon={features.federating ? logo : require('@tabler/icons/world.svg')}
-                    text={features.federating ? instance.title : <FormattedMessage id='tabs_bar.all' defaultMessage='All' />}
-                    onClick={onClose}
-                  />
-
-                  {features.federating && (
-                    <SidebarLink
-                      to='/timeline/fediverse'
-                      icon={!bubbleTimeline ? require('icons/fediverse.svg') : require('@tabler/icons/hexagon.svg')}
-                      text={<FormattedMessage id='tabs_bar.fediverse' defaultMessage='Explore' />}
-                      onClick={onClose}
-                    />
-                  )}
-                </>}
-
-                <hr />
-
-                {
-                  (account.locked || followRequestsCount > 0)  &&
-                    <SidebarLink
-                      to='/follow_requests'
-                      icon={require('@tabler/icons/user-plus.svg')}
-                      text={intl.formatMessage(messages.follow_requests)}
-                      onClick={onClose}
-                    />
-                }
-
-                <SidebarLink
-                  to='/settings/preferences'
-                  icon={require('@tabler/icons/settings.svg')}
-                  text={intl.formatMessage(messages.preferences)}
-                  onClick={onClose}
-                />
 
                 {account.admin && (
                   <SidebarLink
@@ -309,24 +354,6 @@ const SidebarMenu: React.FC = (): JSX.Element | null => {
                     onClick={onClose}
                   />
                 )}
-
-                {features.import && (
-                  <SidebarLink
-                    to='/settings/import'
-                    icon={require('@tabler/icons/cloud-upload.svg')}
-                    text={intl.formatMessage(messages.importData)}
-                    onClick={onClose}
-                  />
-                )}
-
-                <hr />
-
-                <SidebarLink
-                  to='/logout'
-                  icon={require('@tabler/icons/logout.svg')}
-                  text={intl.formatMessage(messages.logout)}
-                  onClick={onClickLogOut}
-                />
               </Stack>
             </Stack>
           </div>

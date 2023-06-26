@@ -19,7 +19,6 @@ const messages = defineMessages({
   fediverse: { id: 'tabs_bar.fediverse', defaultMessage: 'Fediverse' },
   settings: { id: 'tabs_bar.settings', defaultMessage: 'Settings' },
   directory: { id: 'navigation_bar.profile_directory', defaultMessage: 'Profile directory' },
-
 });
 
 /** Desktop sidebar with links to different views in the app. */
