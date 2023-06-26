@@ -1,8 +1,8 @@
 {
-  "name": "mangane-fe",
-  "version": "1.0.0-beta.1",
+  "name": "nexui",
+  "version": "1.0.0-beta.2",
   "displayName": "NexUI",
-  "description": "Devanture pour https://bdx.town",
+  "description": "The UI used for NexifyHub.com",
   "homepage": "https://nexifyhub.com",
   "repository": {
     "type": "git",
@@ -10,7 +10,10 @@
   },
   "keywords": [
     "fediverse",
-    "pleroma"
+    "pleroma",
+    "nexify",
+    "nexifyhub",
+    "social"
   ],
   "bugs": {
     "url": "https://github.com/NexifyHub/NexUI/issues"
